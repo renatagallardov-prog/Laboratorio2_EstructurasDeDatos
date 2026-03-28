@@ -51,9 +51,10 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-    if (list == NULL || list->current == NULL || list->current->next == NULL) return NULL;
-    list->current = list->current->next;
-    return list->current->data;
+    if (list == NULL || list->current == NULL || list->current->next == NULL) return NULL; 
+    // aqui reviso si exite una lista o un current o que haya un next
+    list->current = list->current->next; // el current se mueve al next
+    return list->current->data; // retorno el dato al primer nodo
     
 }
 
@@ -62,7 +63,10 @@ void * nextList(List * list) {
 //   - La segunda función retorna el dato del nodo anterior a current y actualiza el current para que apunte a ese nodo.
 
 void * lastList(List * list) {
-    return NULL;
+    if (list == NULL || list->tail == NULL) return NULL; // reviso si esta vacia
+    list->current = list->tail; // ahora
+    return list->current->data; //retorno el dato 
+    
 }
 
 void * prevList(List * list) {
