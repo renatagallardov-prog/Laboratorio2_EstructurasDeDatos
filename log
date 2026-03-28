@@ -78,3 +78,14 @@ Sat Mar 28 04:01:45 PM UTC 2026:
  tests:  10|2
 total_score: 40/60
 61c6d10
+Sat Mar 28 04:08:32 PM UTC 2026: 
+ list.c | 16 ++++++++++------
+ 1 file changed, 10 insertions(+), 6 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:87:5: error: ‘new’ undeclared (first use in this function)
+   87 |     new->data = data;
+      |     ^~~
+list.c:87:5: note: each undeclared identifier is reported only once for each function it appears in
+6919925
