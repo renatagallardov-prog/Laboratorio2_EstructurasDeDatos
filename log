@@ -94,3 +94,19 @@ Sat Mar 28 04:09:27 PM UTC 2026:
  1 file changed, 1 insertion(+)
  tests:  0|0
 84d9cfa
+Sat Mar 28 04:16:05 PM UTC 2026: 
+ list.c | 13 ++++++++++---
+ 1 file changed, 10 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:87:31: error: ‘return’ with a value, in function returning void [-Wreturn-mismatch]
+   87 |     if (list == NULL ) return NULL;
+      |                               ^~~~
+list.c:86:6: note: declared here
+   86 | void pushFront(List * list, void * data) {
+      |      ^~~~~~~~~
+list.c:97:15: error: assignment to ‘Node *’ from ‘long int’ makes pointer from integer without a cast [-Wint-conversion]
+   97 |     list->head-= new;
+      |               ^~
+ddd7a6f
