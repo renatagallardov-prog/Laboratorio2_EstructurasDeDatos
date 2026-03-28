@@ -32,3 +32,19 @@ Sat Mar 28 03:54:39 PM UTC 2026:
  tests:  9|3
 total_score: 30/60
 5acbe8f
+Sat Mar 28 03:59:43 PM UTC 2026: 
+ list.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:38:9: error: ‘list’ undeclared (first use in this function); did you mean ‘List’?
+   38 |     if (list == NULL) return NULL;
+      |         ^~~~
+      |         List
+list.c:38:9: note: each undeclared identifier is reported only once for each function it appears in
+list.c:41:16: error: statement with no effect [-Werror=unused-value]
+   41 |     list->tail == NULL;
+      |                ^
+cc1: all warnings being treated as errors
+dc60869
