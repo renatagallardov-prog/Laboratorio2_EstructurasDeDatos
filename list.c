@@ -84,9 +84,6 @@ void pushCurrent(List * list, void * data) {
     else list->tail = new; //si current era el ultimo, ahora sera el new
     list->current->next = new; // nodo actual actualiza su next para apuntar al new
 
-    }
-}
-
 }
 
 void * popFront(List * list) {
