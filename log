@@ -110,3 +110,9 @@ list.c:97:15: error: assignment to ‘Node *’ from ‘long int’ makes pointe
    97 |     list->head-= new;
       |               ^~
 ddd7a6f
+Sat Mar 28 04:16:28 PM UTC 2026: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  11|1
+total_score: 50/60
+b54fb64
