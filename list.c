@@ -99,13 +99,6 @@ void pushFront(List * list, void * data) {
 }
 
 void pushBack(List * list, void * data) {
-    if (list == NULL) return;
-    Node *aux = list->head;
-    while (aux->next != NULL) aux = aux->next;
-    Node *new = createNode(data);
-    aux->next = new;
-    new->prev = aux;
-    
     list->current = list->tail;
     pushCurrent(list,data);
 }
@@ -137,7 +130,22 @@ void * popBack(List * list) {
 // Nota: El current debe quedar apuntando al nodo siguiente del eliminado.
 
 void * popCurrent(List * list) {
-    return NULL;
+    if (list == NULL || list->current == NULL) return NULL;
+    Node *izq = list->current->prev;
+    Node *der = list->current->next;
+    Node *data = list->current->data;
+    Node *eliminado = list->current;
+
+    if (izq != NULL) izq->next = der;
+    else list->head = der;
+
+    if (der != NULL) der->prev = izq;
+    else list->tail = izq;
+
+    list->current = der;
+    free(eliminado);
+
+    return data;
 }
 
 void cleanList(List * list) {
