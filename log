@@ -62,3 +62,13 @@ list.c:41:16: error: statement with no effect [-Werror=unused-value]
       |                ^
 cc1: all warnings being treated as errors
 dd3f770
+Sat Mar 28 04:00:12 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:38:9: error: expected expression before ‘List’
+   38 |     if (List == NULL) return NULL;
+      |         ^~~~
+c8c64e8
