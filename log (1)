@@ -1,0 +1,136 @@
+Sat Mar 28 03:25:48 PM UTC 2026: 
+Compilation failed
+In file included from test.c:5:
+list.c:88:1: error: expected identifier or ‘(’ before ‘}’ token
+   88 | }
+      | ^
+list.c:90:1: error: expected identifier or ‘(’ before ‘}’ token
+   90 | }
+      | ^
+48c928f
+Sat Mar 28 03:26:20 PM UTC 2026: 
+ list.c | 3 ---
+ 1 file changed, 3 deletions(-)
+ tests:  1|5
+total_score: 10/60
+e9cc9c6
+Sat Mar 28 03:43:40 PM UTC 2026: 
+ list.c | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+ tests:  5|4
+total_score: 20/60
+ab7f1ea
+Sat Mar 28 03:49:22 PM UTC 2026: 
+ list.c | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+ tests:  6|4
+total_score: 20/60
+f0ea371
+Sat Mar 28 03:54:39 PM UTC 2026: 
+ list.c | 11 +++++++----
+ 1 file changed, 7 insertions(+), 4 deletions(-)
+ tests:  9|3
+total_score: 30/60
+5acbe8f
+Sat Mar 28 03:59:43 PM UTC 2026: 
+ list.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:38:9: error: ‘list’ undeclared (first use in this function); did you mean ‘List’?
+   38 |     if (list == NULL) return NULL;
+      |         ^~~~
+      |         List
+list.c:38:9: note: each undeclared identifier is reported only once for each function it appears in
+list.c:41:16: error: statement with no effect [-Werror=unused-value]
+   41 |     list->tail == NULL;
+      |                ^
+cc1: all warnings being treated as errors
+dc60869
+Sat Mar 28 04:00:00 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:38:9: error: expected expression before ‘List’
+   38 |     if (List == NULL) return NULL;
+      |         ^~~~
+list.c:41:16: error: statement with no effect [-Werror=unused-value]
+   41 |     list->tail == NULL;
+      |                ^
+cc1: all warnings being treated as errors
+dd3f770
+Sat Mar 28 04:00:12 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:38:9: error: expected expression before ‘List’
+   38 |     if (List == NULL) return NULL;
+      |         ^~~~
+c8c64e8
+Sat Mar 28 04:01:45 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  10|2
+total_score: 40/60
+61c6d10
+Sat Mar 28 04:08:32 PM UTC 2026: 
+ list.c | 16 ++++++++++------
+ 1 file changed, 10 insertions(+), 6 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:87:5: error: ‘new’ undeclared (first use in this function)
+   87 |     new->data = data;
+      |     ^~~
+list.c:87:5: note: each undeclared identifier is reported only once for each function it appears in
+6919925
+Sat Mar 28 04:09:27 PM UTC 2026: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+ tests:  0|0
+84d9cfa
+Sat Mar 28 04:16:05 PM UTC 2026: 
+ list.c | 13 ++++++++++---
+ 1 file changed, 10 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:87:31: error: ‘return’ with a value, in function returning void [-Wreturn-mismatch]
+   87 |     if (list == NULL ) return NULL;
+      |                               ^~~~
+list.c:86:6: note: declared here
+   86 | void pushFront(List * list, void * data) {
+      |      ^~~~~~~~~
+list.c:97:15: error: assignment to ‘Node *’ from ‘long int’ makes pointer from integer without a cast [-Wint-conversion]
+   97 |     list->head-= new;
+      |               ^~
+ddd7a6f
+Sat Mar 28 04:16:28 PM UTC 2026: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  11|1
+total_score: 50/60
+b54fb64
+Sat Mar 28 04:24:45 PM UTC 2026: 
+ list.c | 25 ++++++++++++++++---------
+ 1 file changed, 16 insertions(+), 9 deletions(-)
+ tests:  11|1
+total_score: 50/60
+7a5e098
+Sat Mar 28 04:36:30 PM UTC 2026: 
+ list.c | 24 ++++++++++++++++--------
+ 1 file changed, 16 insertions(+), 8 deletions(-)
+ tests:  12|0
+total_score: 60/60
+de6d884
+Sat Mar 28 04:48:05 PM UTC 2026: 
+ list.c | 21 ++++++++++++---------
+ 1 file changed, 12 insertions(+), 9 deletions(-)
+ tests:  12|0
+total_score: 60/60
+e0a2d5e
